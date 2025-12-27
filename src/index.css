@@ -24,13 +24,33 @@ body {
   line-height: 1.6;
   color: var(--text-dark);
   background-color: var(--background-light);
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
 }
 
-html, body {
+html {
   height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+section {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Container */
@@ -130,6 +150,9 @@ html, body {
   padding: 1rem 0;
   gap: 0;
   border-top: 1px solid #e1e8ed;
+  z-index: 999;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
 .navbar-links.mobile-open li {
@@ -395,6 +418,8 @@ html, body {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-page {
