@@ -1,5 +1,4 @@
 import Hero from '../components/hero.tsx'
-import WorkshopSection from '../components/workshop-section.tsx'
 import anasayfaAfis from '../assets/anasayfa-afis.png'
 
 function PosterSection() {
@@ -17,7 +16,7 @@ export default function AnaSayfa() {
         <div className="fade-in">
             <Hero />
             <PosterSection />
-            <WorkshopSection />
+            {/* <WorkshopSection /> */}
         </div>
     )
 }

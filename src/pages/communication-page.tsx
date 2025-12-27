@@ -68,7 +68,7 @@ export default function Iletisim() {
                     <i className="contact-icon fa-regular fa-envelope"></i>
                     <div>
                         <div className="contact-label">E-posta</div>
-                        <div className="contact-value"><a href="mailto:ornek@aristosanat.com" className="navbar-link">aristosanatakademisi@gmail.com</a></div>
+                        <div className="contact-value"><a href="mailto:info@aristosanat.com" className="navbar-link">info@aristosanat.com</a></div>
                     </div>
                 </div>
                 <div className="contact-row">
