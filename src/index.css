@@ -56,6 +56,13 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem 1rem 2rem;
+  position: relative;
+}
+
+.navbar-logo {
+  height: 95px;
+  width: auto;
+  object-fit: contain;
 }
 
 .navbar-brand {
@@ -99,9 +106,50 @@ html, body {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
   color: var(--primary-color);
+  padding: 0.5rem;
+  z-index: 1001;
+  transition: var(--transition);
+}
+
+.mobile-menu-toggle:hover {
+  color: var(--secondary-color);
+}
+
+.navbar-links.mobile-open {
+  display: flex !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background: var(--white);
+  box-shadow: var(--shadow-hover);
+  padding: 1rem 0;
+  gap: 0;
+  border-top: 1px solid #e1e8ed;
+}
+
+.navbar-links.mobile-open li {
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.navbar-links.mobile-open .navbar-link {
+  display: block;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-bottom: none;
+}
+
+.navbar-links.mobile-open .navbar-link:hover {
+  background-color: var(--background-light);
+}
+
+.navbar-links.mobile-open .navbar-link.active::after {
+  display: none;
 }
 
 /* Hero Section */
@@ -371,6 +419,14 @@ html, body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .navbar-content {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-logo {
+    height: 60px !important;
+  }
+
   .navbar-links {
     display: none;
   }
@@ -379,6 +435,10 @@ html, body {
     display: block;
   }
   
+  .hero {
+    padding: 4rem 1.5rem 3rem 1.5rem;
+  }
+
   .hero-title {
     font-size: 2rem;
   }
@@ -406,13 +466,73 @@ html, body {
   .page-container {
     padding: 1rem;
   }
+
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .page-description {
+    font-size: 1rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .about-text,
+  .about-program-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .about-program-block {
+    padding: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .about-program-title {
+    font-size: 1.5rem;
+  }
+
+  .educators-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .navbar-content {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-logo {
+    height: 50px !important;
+  }
+
+  .mobile-menu-toggle {
+    font-size: 1.5rem;
+  }
+
   .hero {
     padding: 3rem 1rem;
   }
   
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
   .features,
   .workshops {
     padding: 2rem 1rem;
@@ -426,6 +546,43 @@ html, body {
   .btn {
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
+  }
+
+  .page-container {
+    padding: 0.75rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+
+  .educators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    padding: 0;
+  }
+
+  .about-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .about-program-title {
+    font-size: 1.25rem;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-icon {
+    margin-top: 0;
   }
 }
 
